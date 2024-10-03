@@ -76,7 +76,7 @@ button{
     outline: none;
     padding: 20px 50px;
     background-color: rgb(253, 0, 127);
-    color: white;
+    color: rgb(247, 247, 247);
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -89,4 +89,44 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+}
+
+/* * 02/10/24 */
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url('../img/desmarcado.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+    transition: all 0.4s;
+}
+/* * O item da lista MARCADA */
+ul li.checked{
+    color: brown;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url('../img/marcado.png');
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: blanchedalmond;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: aliceblue;
 }
